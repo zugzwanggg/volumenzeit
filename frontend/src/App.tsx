@@ -1,3 +1,5 @@
+import {Routes,Route} from 'react-router-dom'
+import Layout from './components/Layout'
 
 
 function App() {
@@ -5,7 +7,11 @@ function App() {
 
   return (
     <>
-      <div className="text-red-400">Frontend</div>
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+      
+        </Route>
+      </Routes>
     </>
   )
 }

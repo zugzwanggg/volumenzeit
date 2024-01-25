@@ -15,7 +15,7 @@ app.use('/auth', authRouter);
 
 
 mongoose.connect(process.env.MONGODB_URI)
-.then(res=> {
+.then(()=> {
   console.log('Db is ok')
   app.listen(3000, ()=>{
     console.log(`Server is running at port: ${process.env.PORT}`)
