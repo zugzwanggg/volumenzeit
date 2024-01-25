@@ -1,14 +1,14 @@
 import Footer from "./Footer"
 import Header from "./Header"
+import {Outlet} from 'react-router-dom'
 
 const Layout = () => {
   return (
     <div>
       <Header/>
 
-        <h1>Title</h1>
-        <h2>FIND YOU DREAM</h2>
-        
+      <Outlet/>
+
       <Footer/>
     </div>
   )

@@ -12,15 +12,17 @@ body {
   font-family: "Poppins", sans-serif;
 };
 
-p {
-  @apply text-gray
-}
+
 
 @layer base {
+  p {
+    @apply text-gray text-sm
+  };
   h1,h2,
   h3,h4,
   h5,h6 {
-    font-family: 'Space Age', sans-serif !important;
+    font-family: 'Space Age', sans-serif;
+    @apply text-3xl md:text-5xl;
   }
 }
 

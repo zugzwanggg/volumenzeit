@@ -17,7 +17,7 @@ export default {
       ,
       screens: {
         sm: "768px",
-        md: "1024px"
+        md: "980px"
       },
       container: {
         center: true,

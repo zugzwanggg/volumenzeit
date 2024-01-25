@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className="container flex items-center justify-between py-4 relative">
 
-      <Link to='/'>
+      <Link className='flex flex-col items-center' to='/'>
         <img className="md:w-64 w-40" src="./img/logo.svg" alt="Logo" />
       </Link>
 
