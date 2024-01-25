@@ -10,13 +10,10 @@ const Header = () => {
   if (isAuth) {
     window.onclick = (e: MouseEvent) => {
       
-      if(e.target instanceof HTMLElement 
-        || 
-        e.target instanceof HTMLImageElement 
-        && 
-        e.target.alt !=='Auth') {
+      if(!(e.target instanceof HTMLImageElement && e.target.alt=='Auth')) {
         setIsAuth(false)
       }
+      
     }
   }
 
@@ -52,10 +49,10 @@ const Header = () => {
           <button className='btn-primary bg-blue'>Design your watch</button>
           
           <div className="flex items-center gap-6">
-            <img onMouseOver={()=>setIsAuth(true)} className='hover:opacity-80' src="./img/authicon.svg" alt="Auth" />
+            <img onMouseOver={()=>setIsAuth(true)}  className='hover:opacity-80' src="./img/authicon.svg" alt="Auth"  />
             <div className="relative">
               <img className='hover:opacity-80' src="./img/cart.svg" alt="Cart" />
-              <span className='absolute -top-3 -right-3 bg-red rounded-full text-xs w-4 h-4  text-white flex items-center justify-center'>
+              <span className='absolute -top-3 -right-3 bg-red rounded-full text-xs w-4 h-4 text-white flex items-center justify-center'>
                 0
               </span>
             </div>
@@ -67,7 +64,7 @@ const Header = () => {
         isAuth
         &&
         <div onMouseOver={()=>setIsAuth(true)} 
-        className='shadow-xl absolute right-10 top-20 rounded-xl flex flex-col gap-2 bg-white px-8 py-6'>
+        className='shadow-shadowBox w-60 absolute right-10 top-20 rounded-xl flex flex-col gap-2 bg-white px-8 py-6'>
             <button className='btn-primary bg-black border-2 border-solid border-black'>
               Login
             </button>

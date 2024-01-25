@@ -11,6 +11,10 @@ export default {
         blue: "#735CFF",
         red: "#FF8585"
       },
+      boxShadow: {
+        shadowBox: '0px 40px 40px 0px rgba(114, 117, 119, 0.25);'
+      }
+      ,
       screens: {
         sm: "768px",
         md: "1024px"
