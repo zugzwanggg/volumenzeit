@@ -8,6 +8,7 @@ const Layout = () => {
 
         <h1>Title</h1>
         <h2>FIND YOU DREAM</h2>
+        
       <Footer/>
     </div>
   )

@@ -68,7 +68,7 @@ const Header = () => {
             <button className='btn-primary bg-black border-2 border-solid border-black'>
               Login
             </button>
-            <button className='btn-primary bg-white text-black border-2 border-solid border-black'>
+            <button className='btn-primary bg-white hover:bg-slate-100 text-black border-2 border-solid border-black'>
               Sign Up
             </button>
         </div>
@@ -77,9 +77,9 @@ const Header = () => {
 
       {/* Burger */}
       <div onClick={()=>setNav(prev=>!prev)} className={`md:hidden`}>
-        <span className={`bg-blue w-7 block h-1 duration-500 translate-y-3 ${nav ? 'rotate-45 translate-y-0.5' : ''}`}></span>
+        <span className={`bg-blue w-7 block h-1 duration-500  ${nav ? 'rotate-45 translate-y-0.5' : 'translate-y-3'}`}></span>
         <span className={`bg-blue block h-1 ${nav && ' hidden'}`}></span>
-        <span className={`bg-blue w-7 block h-1 duration-500 -translate-y-3 ${nav ? '-rotate-45 -translate-y-0.5': ''}`}></span>
+        <span className={`bg-blue w-7 block h-1 duration-500 ${nav ? '-rotate-45 -translate-y-0.5': '-translate-y-3'}`}></span>
       </div>
     </header>
   )
