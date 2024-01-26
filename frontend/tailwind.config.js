@@ -17,11 +17,16 @@ export default {
       ,
       screens: {
         sm: "768px",
-        md: "980px"
+        md: "980px",
+        lg: "1280px"
       },
+      height: {
+        smScreen: "90vh"
+      }
+      ,
       container: {
         center: true,
-        padding: "1rem"
+        padding: "1.5rem"
       }
     },
   },
