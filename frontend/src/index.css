@@ -16,7 +16,7 @@ body {
 
 @layer base {
   p {
-    @apply text-gray text-sm
+    @apply text-gray text-x md:text-sm
   };
   h1,h2,
   h3,h4,
