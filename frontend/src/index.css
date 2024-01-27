@@ -1,26 +1,24 @@
 @import url('https://fonts.cdnfonts.com/css/space-age');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  font-family: "Poppins", sans-serif;
-};
-
-
+  font-family: 'Poppins', sans-serif;
+}
 
 @layer base {
   p {
-    @apply text-gray text-x md:text-sm
-  };
-  h1,h2,
-  h3,h4,
-  h5,h6 {
+    @apply text-gray text-x md:text-sm;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Age', sans-serif;
     @apply text-3xl md:text-5xl;
   }
@@ -28,6 +26,6 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply text-sm leading-3 text-white py-6 px-10 rounded-md hover:opacity-90
+    @apply text-sm leading-3 text-white py-6 px-10 rounded-md hover:opacity-90;
   }
 }
