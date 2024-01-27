@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const DesignYourWatch = () => {
   return (
     <section className="relative bg-blue py-20 text-white">
@@ -50,7 +52,9 @@ const DesignYourWatch = () => {
             </div>
           </li>
         </ul>
-        <button className="btn-primary bg-black">Design Your Watch</button>
+        <Link to="/custom" className="btn-primary bg-black">
+          Design your watch
+        </Link>
       </div>
     </section>
   );

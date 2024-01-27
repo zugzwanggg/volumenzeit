@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const OurMission = () => {
   return (
     <section className="relative overflow-hidden bg-black text-white md:h-screen md:pb-44">
@@ -18,7 +20,9 @@ const OurMission = () => {
             We love Out-of-the-box designs and believe there are many people who
             thinks the same.
           </p>
-          <button className="btn-primary bg-blue">Design your watch</button>
+          <Link to="/custom" className="btn-primary bg-blue">
+            Design your watch
+          </Link>
         </div>
 
         <svg

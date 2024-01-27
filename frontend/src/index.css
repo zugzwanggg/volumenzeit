@@ -22,6 +22,9 @@ body {
     font-family: 'Space Age', sans-serif;
     @apply text-3xl md:text-5xl;
   }
+  input {
+    @apply border-customWhite w-full rounded-md border-2 border-solid bg-white p-5 outline-none;
+  }
 }
 
 @layer components {

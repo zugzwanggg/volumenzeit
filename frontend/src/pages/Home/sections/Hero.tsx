@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <section className="nd:flex relative overflow-hidden pb-96 pt-14 md:h-smScreen md:pt-40">
@@ -8,9 +10,9 @@ const Hero = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
             facilisi elementum commodo ipsum. Aenean aenean adipiscing lect
           </p>
-          <button className="btn-primary mt-4 bg-blue">
-            Design Your Watch
-          </button>
+          <Link to="/custom" className="btn-primary mt-4 bg-blue">
+            Design your watch
+          </Link>
         </div>
       </div>
       <div className="flex flex-col gap-5 p-8 text-center md:absolute md:-left-28 md:top-64 md:-rotate-90 md:flex-row md:p-0">

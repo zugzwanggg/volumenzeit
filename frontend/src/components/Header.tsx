@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [nav, setNav] = useState<boolean>(false);
@@ -22,23 +22,53 @@ const Header = () => {
       <div className="hidden items-center sm:gap-6 md:flex md:gap-11">
         <nav>
           <ul className="flex items-center gap-8 text-sm text-gray">
-            <li className="hover:text-black">
-              <Link to="/">Home</Link>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `hover:text-black ${isActive ? 'border-b-solid border-b-2 border-b-blue font-bold text-black' : ''}`
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
-            <li className="hover:text-black">
-              <Link to="/features">Features</Link>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `hover:text-black ${isActive ? 'border-b-solid border-b-2 border-b-blue font-bold text-black' : ''}`
+                }
+                to="/products"
+              >
+                Products
+              </NavLink>
             </li>
-            <li className="hover:text-black">
-              <Link to="/about">About Us</Link>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `hover:text-black ${isActive ? 'border-b-solid border-b-2 border-b-blue font-bold text-black' : ''}`
+                }
+                to="/contact"
+              >
+                Contact Us
+              </NavLink>
             </li>
-            <li className="hover:text-black">
-              <Link to="/products">Watches</Link>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `hover:text-black ${isActive ? 'border-b-solid border-b-2 border-b-blue font-bold text-black' : ''}`
+                }
+                to="/legal"
+              >
+                Legal Page
+              </NavLink>
             </li>
           </ul>
         </nav>
 
         <div className="flex items-center gap-6">
-          <button className="btn-primary bg-blue">Design your watch</button>
+          <Link to="/custom" className="btn-primary bg-blue">
+            Design your watch
+          </Link>
 
           <div className="flex items-center gap-6">
             <img
@@ -64,14 +94,20 @@ const Header = () => {
       {isAuth && (
         <div
           onMouseOver={() => setIsAuth(true)}
-          className="absolute right-10 top-20 flex w-60 flex-col gap-2 rounded-xl bg-white px-8 py-6 shadow-shadowBox"
+          className="absolute right-10 top-20 z-20 flex w-60 flex-col gap-2 rounded-xl bg-white px-8 py-6 shadow-shadowBox"
         >
-          <button className="btn-primary border-2 border-solid border-black bg-black">
+          <Link
+            to="/login"
+            className="btn-primary border-2 border-solid border-black bg-black text-center"
+          >
             Login
-          </button>
-          <button className="btn-primary border-2 border-solid border-black bg-white text-black hover:bg-slate-100">
+          </Link>
+          <Link
+            to="/signup"
+            className="btn-primary border-2 border-solid border-black bg-white text-center text-black hover:bg-slate-100"
+          >
             Sign Up
-          </button>
+          </Link>
         </div>
       )}
 

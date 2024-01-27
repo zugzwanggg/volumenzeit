@@ -10,6 +10,7 @@ export default {
         gray: '#939393',
         blue: '#735CFF',
         red: '#FF8585',
+        customWhite: '#EAECF5',
       },
       boxShadow: {
         shadowBox: '0px 40px 40px 0px rgba(114, 117, 119, 0.25);',
