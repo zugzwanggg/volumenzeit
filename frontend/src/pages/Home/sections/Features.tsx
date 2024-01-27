@@ -1,14 +1,14 @@
 const Features = () => {
   return (
-    <section className="py-16 md:py-20 container">
+    <section className="container py-16 md:py-20">
       <h1 className="text-center">Features</h1>
-      <div className="items-center relative mt-16">
+      <div className="relative mt-16 items-center">
         <img className="mx-auto" src="./img/black-watch.png" alt="" />
 
         <ul className="flex flex-col gap-10 md:absolute md:top-0 md:w-full">
           <li
-            className="flex flex-col items-center md:items-start justify-center gap-5 
-            md:absolute md:top-10 md:left-0 lg:left-20 md:flex-row-reverse"
+            className="flex flex-col items-center justify-center gap-5 md:absolute 
+            md:left-0 md:top-10 md:flex-row-reverse md:items-start lg:left-20"
           >
             <img src="./img/blue-circle.svg" alt="" />
             <div className="flex flex-col items-center gap-5 text-center md:items-end md:text-right">
@@ -24,7 +24,7 @@ const Features = () => {
 
           <li
             className="flex flex-col items-center justify-center gap-5 
-            md:absolute md:top-96 md:left-0 lg:left-10 md:flex-row-reverse"
+            md:absolute md:left-0 md:top-96 md:flex-row-reverse lg:left-10"
           >
             <img src="./img/blue-circle.svg" alt="" />
             <div className="flex flex-col items-center gap-5 text-center md:text-right">
@@ -43,11 +43,11 @@ const Features = () => {
             </div>
           </li>
           <li
-            className="flex flex-col items-center justify-center gap-5
-            md:absolute md:top-32 right-0 md:items-start md:flex-row"
+            className="right-0 flex flex-col items-center justify-center
+            gap-5 md:absolute md:top-32 md:flex-row md:items-start"
           >
             <img src="./img/blue-circle.svg" alt="" />
-            <div className="flex flex-col items-center gap-5 text-center md:text-left md:items-start">
+            <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left">
               <b className="text-xl">Features</b>
               <p className="text-x leading-6 text-gray">
                 Case Size: 42mm <br />

@@ -1,40 +1,40 @@
 const Hero = () => {
   return (
-    <section className="pt-14 pb-96 md:h-smScreen relative md:pt-40 overflow-hidden nd:flex">
+    <section className="nd:flex relative overflow-hidden pb-96 pt-14 md:h-smScreen md:pt-40">
       <div className="container">
-        <div className="flex md:items-start md:text-left gap-6 md:max-w-xl flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center gap-6 text-center md:max-w-xl md:items-start md:text-left">
           <h1 className="text-4xl md:text-6xl">Find your dream watch</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
             facilisi elementum commodo ipsum. Aenean aenean adipiscing lect
           </p>
-          <button className="btn-primary bg-blue mt-4">
+          <button className="btn-primary mt-4 bg-blue">
             Design Your Watch
           </button>
         </div>
       </div>
-      <div className="text-center flex flex-col gap-5 p-8 md:p-0 md:absolute md:flex-row md:-rotate-90 md:-left-28 md:top-64">
+      <div className="flex flex-col gap-5 p-8 text-center md:absolute md:-left-28 md:top-64 md:-rotate-90 md:flex-row md:p-0">
         <h3 className="text-sm leading-3">follow us</h3>
 
         <ul className="flex items-center justify-center gap-4 md:flex-row-reverse">
-          <li className="shadow-md w-6 h-6 bg-white rounded-full grid place-items-center md:rotate-90">
+          <li className="grid h-6 w-6 place-items-center rounded-full bg-white shadow-md md:rotate-90">
             <img className="w-4" src="./img/pinterest.svg" alt="" />
           </li>
-          <li className="shadow-md w-6 h-6 bg-white rounded-full grid place-items-center md:rotate-90">
+          <li className="grid h-6 w-6 place-items-center rounded-full bg-white shadow-md md:rotate-90">
             <img className="w-4" src="./img/facebook.svg" alt="" />
           </li>
-          <li className="shadow-md w-6 h-6 bg-white rounded-full grid place-items-center md:rotate-90">
+          <li className="grid h-6 w-6 place-items-center rounded-full bg-white shadow-md md:rotate-90">
             <img className="w-4" src="./img/twitter.svg" alt="" />
           </li>
-          <li className="shadow-md w-6 h-6 bg-white rounded-full grid place-items-center md:rotate-90">
+          <li className="grid h-6 w-6 place-items-center rounded-full bg-white shadow-md md:rotate-90">
             <img className="w-4" src="./img/instagram.svg" alt="" />
           </li>
         </ul>
       </div>
 
       <img
-        className="max-w-3xl absolute right-0 translate-x-48
-                md:max-w-4xl md:translate-x-72 md:bottom-0
+        className="absolute right-0 max-w-3xl translate-x-48
+                md:bottom-0 md:max-w-4xl md:translate-x-72
                 lg:max-w-5xl lg:translate-x-64"
         src="./img/hero-img.png"
         alt="watch"

@@ -1,6 +1,6 @@
 const DesignYourWatch = () => {
   return (
-    <section className="bg-blue text-white relative py-20">
+    <section className="relative bg-blue py-20 text-white">
       <div className="container flex flex-col items-center gap-14">
         <svg
           className="absolute -top-1 right-1/2 translate-x-1/2"
@@ -20,32 +20,32 @@ const DesignYourWatch = () => {
         <h1 className="text-center">Desing your watch</h1>
         <ul
           className="flex flex-col items-center
-         md:flex-row md:justify-center md:items-center"
+         md:flex-row md:items-center md:justify-center"
         >
           <li>
-            <p className="text-white text-sm mb-2">Case Color</p>
-            <div className="rounded-full w-20 h-20 border-solid border-2 border-white grid place-items-center">
+            <p className="mb-2 text-sm text-white">Case Color</p>
+            <div className="grid h-20 w-20 place-items-center rounded-full border-2 border-solid border-white">
               <h3 className="cursor-pointer">1</h3>
             </div>
           </li>
-          <hr className="h-14 w-x md:h-x md:translate-y-4 md:w-40 bg-white mb-1" />
+          <hr className="mb-1 h-14 w-x bg-white md:h-x md:w-40 md:translate-y-4" />
           <li>
-            <p className="text-white text-sm mb-2">Dial Design</p>
-            <div className="rounded-full w-20 h-20 border-solid border-2 border-white grid place-items-center">
+            <p className="mb-2 text-sm text-white">Dial Design</p>
+            <div className="grid h-20 w-20 place-items-center rounded-full border-2 border-solid border-white">
               <h3 className="cursor-pointer">2</h3>
             </div>
           </li>
-          <hr className="h-14 w-x md:h-x md:translate-y-4 md:w-40 bg-white mb-1" />
+          <hr className="mb-1 h-14 w-x bg-white md:h-x md:w-40 md:translate-y-4" />
           <li>
-            <p className="text-white text-sm mb-2">Dial Color</p>
-            <div className="rounded-full w-20 h-20 border-solid border-2 border-white grid place-items-center">
+            <p className="mb-2 text-sm text-white">Dial Color</p>
+            <div className="grid h-20 w-20 place-items-center rounded-full border-2 border-solid border-white">
               <h3 className="cursor-pointer">3</h3>
             </div>
           </li>
-          <hr className="h-14 w-x md:h-x md:translate-y-4 md:w-40 bg-white mb-1" />
+          <hr className="mb-1 h-14 w-x bg-white md:h-x md:w-40 md:translate-y-4" />
           <li>
-            <p className="text-white text-sm mb-2">Strap Design</p>
-            <div className="rounded-full w-20 h-20 border-solid border-2 border-white grid place-items-center">
+            <p className="mb-2 text-sm text-white">Strap Design</p>
+            <div className="grid h-20 w-20 place-items-center rounded-full border-2 border-solid border-white">
               <h3 className="cursor-pointer">4</h3>
             </div>
           </li>

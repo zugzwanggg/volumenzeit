@@ -72,7 +72,7 @@ const Watches = () => {
             </SwiperSlide>
           );
         })}
-        <div className="container flex flex-col items-center gap-7 mt-4 md:mt-24 md:flex-row md:justify-between">
+        <div className="container mt-4 flex flex-col items-center gap-7 md:mt-24 md:flex-row md:justify-between">
           <SwiperButtons beg={beginning} end={ending} />
           <button className="btn-primary bg-blue">Design your watch</button>
         </div>

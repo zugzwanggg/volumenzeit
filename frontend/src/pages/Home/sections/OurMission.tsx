@@ -1,13 +1,13 @@
 const OurMission = () => {
   return (
-    <section className="bg-black text-white relative md:h-screen overflow-hidden md:pb-44">
+    <section className="relative overflow-hidden bg-black text-white md:h-screen md:pb-44">
       <img
-        className="mx-auto lg:w md:-left-11 md:absolute"
+        className="lg:w mx-auto md:absolute md:-left-11"
         src="./img/mission-img.png"
         alt="Mission Img"
       />
       <div className="container md:flex md:justify-end">
-        <div className="flex flex-col gap-7 items-center text-center py-16 md:items-start md:pt-36 md:text-left md:max-w-lg">
+        <div className="flex flex-col items-center gap-7 py-16 text-center md:max-w-lg md:items-start md:pt-36 md:text-left">
           <h1>Our mission</h1>
           <p>
             We have invested 6 year of our lifes to invent a new technology of
@@ -22,7 +22,7 @@ const OurMission = () => {
         </div>
 
         <svg
-          className="hidden md:block md:absolute rotate-360 -top-1 -right-32 w-64 h-20"
+          className="-right-32 -top-1 hidden h-20 w-64 rotate-360 md:absolute md:block"
           viewBox="0 0 78 43"
           fill=""
           xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const OurMission = () => {
         </svg>
 
         <svg
-          className="hidden md:block md:absolute md:left-0 md:-bottom-4"
+          className="hidden md:absolute md:-bottom-4 md:left-0 md:block"
           xmlns="http://www.w3.org/2000/svg"
           width="820"
           height="110"

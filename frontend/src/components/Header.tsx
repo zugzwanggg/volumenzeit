@@ -14,14 +14,14 @@ const Header = () => {
   }
 
   return (
-    <header className="container flex items-center justify-between py-4 relative">
+    <header className="container relative flex items-center justify-between py-4">
       <Link className="flex flex-col items-center" to="/">
-        <img className="md:w-64 w-40" src="./img/logo.svg" alt="Logo" />
+        <img className="w-40 md:w-64" src="./img/logo.svg" alt="Logo" />
       </Link>
 
-      <div className="hidden md:flex items-center md:gap-11 sm:gap-6">
+      <div className="hidden items-center sm:gap-6 md:flex md:gap-11">
         <nav>
-          <ul className="text-gray flex items-center gap-8 text-sm">
+          <ul className="flex items-center gap-8 text-sm text-gray">
             <li className="hover:text-black">
               <Link to="/">Home</Link>
             </li>
@@ -53,7 +53,7 @@ const Header = () => {
                 src="./img/cart.svg"
                 alt="Cart"
               />
-              <span className="absolute -top-3 -right-3 bg-red rounded-full text-xs w-4 h-4 text-white flex items-center justify-center">
+              <span className="absolute -right-3 -top-3 flex h-4 w-4 items-center justify-center rounded-full bg-red text-xs text-white">
                 0
               </span>
             </div>
@@ -64,12 +64,12 @@ const Header = () => {
       {isAuth && (
         <div
           onMouseOver={() => setIsAuth(true)}
-          className="shadow-shadowBox w-60 absolute right-10 top-20 rounded-xl flex flex-col gap-2 bg-white px-8 py-6"
+          className="absolute right-10 top-20 flex w-60 flex-col gap-2 rounded-xl bg-white px-8 py-6 shadow-shadowBox"
         >
-          <button className="btn-primary bg-black border-2 border-solid border-black">
+          <button className="btn-primary border-2 border-solid border-black bg-black">
             Login
           </button>
-          <button className="btn-primary bg-white hover:bg-slate-100 text-black border-2 border-solid border-black">
+          <button className="btn-primary border-2 border-solid border-black bg-white text-black hover:bg-slate-100">
             Sign Up
           </button>
         </div>
@@ -78,11 +78,11 @@ const Header = () => {
       {/* Burger */}
       <div onClick={() => setNav((prev) => !prev)} className={`md:hidden`}>
         <span
-          className={`bg-blue w-7 block h-1 duration-500  ${nav ? 'rotate-45 translate-y-0.5' : 'translate-y-3'}`}
+          className={`block h-1 w-7 bg-blue duration-500  ${nav ? 'translate-y-0.5 rotate-45' : 'translate-y-3'}`}
         ></span>
-        <span className={`bg-blue block h-1 ${nav && ' hidden'}`}></span>
+        <span className={`block h-1 bg-blue ${nav && ' hidden'}`}></span>
         <span
-          className={`bg-blue w-7 block h-1 duration-500 ${nav ? '-rotate-45 -translate-y-0.5' : '-translate-y-3'}`}
+          className={`block h-1 w-7 bg-blue duration-500 ${nav ? '-translate-y-0.5 -rotate-45' : '-translate-y-3'}`}
         ></span>
       </div>
     </header>
