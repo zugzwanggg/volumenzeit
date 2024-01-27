@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <section className="container pt-14 md:flex md:justify-between md:pt-56 ">
+    <section className="container pt-14 md:flex md:items-center md:justify-between md:pt-56 ">
       <div className="mx-auto text-center md:mx-0 md:w-96 md:text-left">
         <h1>About us</h1>
         <p className="mt-6">
@@ -12,7 +12,7 @@ const AboutUs = () => {
         </p>
       </div>
       <iframe
-        className="h-48 w-full sm:h-96 md:h-80 md:max-w-xl"
+        className="mt-12 h-64 w-full sm:h-96 md:h-80 md:max-w-xl"
         src="https://www.youtube.com/embed/s-x_HVCwKgI?si=WzLRDAP3TXe7fieF"
         title="YouTube video player"
         allow="accelerometer; autoplay ; picture-in-picture; full-screen"

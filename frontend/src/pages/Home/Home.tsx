@@ -4,6 +4,7 @@ import DesignYourWatch from './sections/DesignYourWatch';
 import OurMission from './sections/OurMission';
 import Watches from './sections/Watches';
 import AboutUs from './sections/AboutUs';
+import SignUp from './sections/SignUp';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <OurMission />
       <Watches />
       <AboutUs />
+      <SignUp/>
     </div>
   );
 };
