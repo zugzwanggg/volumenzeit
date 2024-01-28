@@ -59,7 +59,7 @@ const Header = () => {
                 }
                 to="/legal"
               >
-                Legal Page
+                Legal Pages
               </NavLink>
             </li>
           </ul>
@@ -111,15 +111,23 @@ const Header = () => {
         </div>
       )}
 
-      {/* Burger */}
-      <div onClick={() => setNav((prev) => !prev)} className={`md:hidden`}>
-        <span
-          className={`block h-1 w-7 bg-blue duration-500  ${nav ? 'translate-y-0.5 rotate-45' : 'translate-y-3'}`}
-        ></span>
-        <span className={`block h-1 bg-blue ${nav && ' hidden'}`}></span>
-        <span
-          className={`block h-1 w-7 bg-blue duration-500 ${nav ? '-translate-y-0.5 -rotate-45' : '-translate-y-3'}`}
-        ></span>
+      <div className="flex items-center gap-4 md:hidden">
+        <div className="relative">
+          <img className="hover:opacity-80" src="./img/cart.svg" alt="Cart" />
+          <span className="absolute -right-3 -top-3 flex h-4 w-4 items-center justify-center rounded-full bg-red text-xs text-white">
+            0
+          </span>
+        </div>
+        {/* Burger */}
+        <div onClick={() => setNav((prev) => !prev)}>
+          <span
+            className={`block h-1 w-7 bg-blue duration-500  ${nav ? 'translate-y-0.5 rotate-45' : 'translate-y-3'}`}
+          ></span>
+          <span className={`block h-1 bg-blue ${nav && ' hidden'}`}></span>
+          <span
+            className={`block h-1 w-7 bg-blue duration-500 ${nav ? '-translate-y-0.5 -rotate-45' : '-translate-y-3'}`}
+          ></span>
+        </div>
       </div>
     </header>
   );

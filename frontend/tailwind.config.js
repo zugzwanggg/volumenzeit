@@ -36,6 +36,7 @@ export default {
       },
       backgroundImage: {
         signUpBg: "url('./img/signBg.png')",
+        authBg: "url('./img/authBg.png')",
       },
     },
   },

@@ -23,7 +23,10 @@ body {
     @apply text-3xl md:text-5xl;
   }
   input {
-    @apply border-customWhite w-full rounded-md border-2 border-solid bg-white p-5 outline-none;
+    @apply w-full rounded-md border-2 border-solid border-customWhite bg-white p-5 outline-none;
+  }
+  textarea {
+    @apply w-full rounded-md border-2 border-solid border-customWhite bg-white p-5 outline-none;
   }
 }
 
