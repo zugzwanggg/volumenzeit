@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../hooks';
+import { openCart, openMenu } from '../features/UserSlice';
 
 const Header = () => {
-  const [nav, setNav] = useState<boolean>(false);
   const [isAuth, setIsAuth] = useState<boolean>(false);
+
+  const dispatch = useAppDispatch();
+  const { menu } = useAppSelector((state) => state.user);
 
   if (isAuth) {
     window.onclick = (e: MouseEvent) => {
@@ -13,8 +17,12 @@ const Header = () => {
     };
   }
 
+  const handleBurger = () => {
+    dispatch(openMenu());
+  };
+
   return (
-    <header className="container relative flex items-center justify-between py-4">
+    <header className="container relative z-50 flex items-center justify-between py-4">
       <Link className="flex flex-col items-center" to="/">
         <img className="w-40 md:w-64" src="./img/logo.svg" alt="Logo" />
       </Link>
@@ -77,7 +85,7 @@ const Header = () => {
               src="./img/authicon.svg"
               alt="Auth"
             />
-            <div className="relative">
+            <div onClick={() => dispatch(openCart())} className="relative">
               <img
                 className="hover:opacity-80"
                 src="./img/cart.svg"
@@ -112,20 +120,20 @@ const Header = () => {
       )}
 
       <div className="flex items-center gap-4 md:hidden">
-        <div className="relative">
+        <div onClick={() => dispatch(openCart())} className="relative">
           <img className="hover:opacity-80" src="./img/cart.svg" alt="Cart" />
           <span className="absolute -right-3 -top-3 flex h-4 w-4 items-center justify-center rounded-full bg-red text-xs text-white">
             0
           </span>
         </div>
         {/* Burger */}
-        <div onClick={() => setNav((prev) => !prev)}>
+        <div onClick={() => handleBurger()}>
           <span
-            className={`block h-1 w-7 bg-blue duration-500  ${nav ? 'translate-y-0.5 rotate-45' : 'translate-y-3'}`}
+            className={`block h-1 w-7 bg-blue duration-500  ${menu ? 'translate-y-0.5 rotate-45' : 'translate-y-3'}`}
           ></span>
-          <span className={`block h-1 bg-blue ${nav && ' hidden'}`}></span>
+          <span className={`block h-1 bg-blue ${menu && ' hidden'}`}></span>
           <span
-            className={`block h-1 w-7 bg-blue duration-500 ${nav ? '-translate-y-0.5 -rotate-45' : '-translate-y-3'}`}
+            className={`block h-1 w-7 bg-blue duration-500 ${menu ? '-translate-y-0.5 -rotate-45' : '-translate-y-3'}`}
           ></span>
         </div>
       </div>

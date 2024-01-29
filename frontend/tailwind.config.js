@@ -38,6 +38,9 @@ export default {
         signUpBg: "url('./img/signBg.png')",
         authBg: "url('./img/authBg.png')",
       },
+      zIndex: {
+        60: '60',
+      },
     },
   },
   plugins: [],

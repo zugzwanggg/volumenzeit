@@ -3,6 +3,7 @@ import 'swiper/css';
 import SwiperButtons from '../../../components/SwiperButtons';
 import { Navigation } from 'swiper/modules';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Watches = () => {
   const [beginning, setBeginning] = useState<boolean>(true);
@@ -74,7 +75,9 @@ const Watches = () => {
         })}
         <div className="container mt-4 flex flex-col items-center gap-7 md:mt-24 md:flex-row md:justify-between">
           <SwiperButtons beg={beginning} end={ending} />
-          <button className="btn-primary bg-blue">Design your watch</button>
+          <Link to="/products" className="btn-primary bg-blue">
+            Products
+          </Link>
         </div>
       </Swiper>
     </section>
