@@ -1,8 +1,9 @@
+import { Request, Response } from "express";
 import userModel from "../models/userModel";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-export const createUser = async (req, res) => {
+export const createUser = async (req: Request, res: Response) => {
   try {
     const { fullName, email, password, verifyPassword } = req.body;
 
@@ -63,6 +64,68 @@ export const createUser = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true
     }).send()
+
+  } catch (error) {
+    res.status(500).json({
+      message: error
+    })
+  }
+}
+
+
+export const loginUser = async (req: Request, res: Response) => {
+  try {
+
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({
+        message: "Fill the required fields"
+      })
+    }
+
+    const exist = await userModel.findOne({ email })
+
+    if (!exist) {
+      return res.status(401).json({
+        message: "Wrong user email or password"
+      })
+    };
+
+    const checkPassword = await bcrypt.compare(password, exist.passwordHash || "");
+
+    if (!checkPassword) {
+      return res.status(400).json({
+        message: "Wrong email or password"
+      })
+    };
+
+
+    const token = jwt.sign({
+      id: exist._id
+    }, process.env.JWT_KEY || "");
+
+    res.cookie("token", token, {
+      httpOnly: true
+    }).send()
+
+
+
+  } catch (error) {
+    res.status(500).json({
+      message: error
+    })
+  }
+}
+
+
+export const logoutUser = async (req: Request, res: Response) => {
+  try {
+
+    res.cookie("token", "", {
+      httpOnly: true,
+      expires: new Date(0)
+    }).send();
 
   } catch (error) {
     res.status(500).json({
