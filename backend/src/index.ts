@@ -1,9 +1,18 @@
 import express, { Express } from "express";
 import mongoose from "mongoose"
 import dotenv from "dotenv";
-dotenv.config()
+dotenv.config();
+import cors from "cors";
+import { authRouter } from "./routes/auth";
 
-const app: Express = express()
+const app: Express = express();
+
+app.use(express.json());
+app.use(cors());
+
+app.use("/auth", authRouter)
+
+
 
 mongoose.connect(process.env.MONGODB_URI || "")
   .then(() => {
@@ -13,6 +22,6 @@ mongoose.connect(process.env.MONGODB_URI || "")
     })
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err.message);
 
   })
