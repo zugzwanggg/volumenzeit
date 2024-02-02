@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../hooks';
-import { openMenu } from '../features/UserSlice';
+import { openMenu } from '../features/UserSlice/UserSlice';
 
 const Navigation = () => {
   const dispatch = useAppDispatch();

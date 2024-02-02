@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../hooks';
-import { openCart, openMenu } from '../features/UserSlice';
+import { openCart, openMenu } from '../features/UserSlice/UserSlice';
 
 const Header = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);

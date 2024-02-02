@@ -1,5 +1,5 @@
 import { useAppDispatch } from '../hooks';
-import { openCart } from '../features/UserSlice';
+import { openCart } from '../features/UserSlice/UserSlice';
 import { useAppSelector } from '../hooks';
 
 const Cart = () => {
