@@ -1,6 +1,6 @@
 const ContactUs = () => {
   return (
-    <section className="container flex flex-col items-center justify-between py-14 md:flex-row">
+    <section className="container flex flex-col items-center justify-between py-20 md:flex-row">
       <div className="">
         <div className="max-w-xl">
           <h1>Contact Us</h1>

@@ -24,7 +24,7 @@ const Products = () => {
 
   return (
     <section>
-      <div className="bg-blue py-7 md:py-20">
+      <div className="bg-blue py-20">
         <div className="container">
           <h1 className="text-white">Products</h1>
           <p className="mt-4 text-white">0 Total Products</p>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const LegalPages = () => {
   return (
-    <section className="relative z-40 pb-80">
+    <section className="relative z-40 pb-80 pt-10">
       <div className="mx-4 bg-white md:container  md:pb-36">
         <h1 className="pb-8 pt-14 text-center md:pb-16 md:pt-20">Delivery</h1>
         <ul className="flex flex-col items-center gap-14 bg-white p-6 *:max-w-3xl">
@@ -69,7 +69,7 @@ const LegalPages = () => {
           </li>
         </ul>
       </div>
-      <div className="bg-authBg absolute bottom-1 -z-10 w-full bg-blue bg-center bg-no-repeat pb-24 pt-72 text-center text-white">
+      <div className="absolute bottom-1 -z-10 w-full bg-blue bg-authBg bg-center bg-no-repeat pb-24 pt-72 text-center text-white">
         <b className="block text-3xl">Can't find the answer?</b>
         <p className="mx-auto mb-10 mt-4 w-56 text-white md:w-full">
           Get int ouch with our proffessional team and we will get your answer
