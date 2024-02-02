@@ -11,7 +11,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`absolute right-0 z-50 h-screen w-full  bg-white pt-14 duration-500 ${menu ? 'translate-x-0' : '-translate-x-full'}`}
+      className={`fixed right-0 top-10 z-50 h-screen w-full  bg-white pt-14 duration-500 ${menu ? 'translate-x-0' : '-translate-x-full'}`}
     >
       <ul className="flex flex-col items-center gap-8 text-sm text-gray">
         <li onClick={() => handleMenu()}>

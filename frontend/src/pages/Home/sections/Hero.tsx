@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="nd:flex relative overflow-hidden pb-96 pt-14 md:h-smScreen md:pt-40">
+    <section className="nd:flex relative overflow-hidden pb-96 pt-36 md:h-smScreen md:pt-40">
       <div className="container">
         <div className="flex flex-col items-center justify-center gap-6 text-center md:max-w-xl md:items-start md:text-left">
           <h1 className="text-4xl md:text-6xl">Find your dream watch</h1>
