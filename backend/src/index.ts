@@ -3,12 +3,18 @@ import mongoose from "mongoose"
 import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import { authRouter } from "./routes/auth";
+import checkAuth from "./middleware/checkAuth";
 
 const app: Express = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
+app.use(cookieParser())
 
 app.use("/auth", authRouter)
 

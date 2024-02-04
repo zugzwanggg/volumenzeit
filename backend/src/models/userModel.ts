@@ -1,10 +1,12 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
+import { IUser } from "../types";
 
 
-const userModel = new mongoose.Schema({
+const userModel: Schema<IUser> = new mongoose.Schema({
   email: {
     require: true,
-    type: String
+    type: String,
+    unique: true
   },
   passwordHash: {
     require: true,

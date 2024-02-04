@@ -90,9 +90,9 @@ export const loginUser = async (req: Request, res: Response) => {
       return res.status(401).json({
         message: "Wrong user email or password"
       })
-    };
+    }
 
-    const checkPassword = await bcrypt.compare(password, exist.passwordHash || "");
+    const checkPassword = await bcrypt.compare(password, exist.passwordHash);
 
     if (!checkPassword) {
       return res.status(400).json({
@@ -119,17 +119,16 @@ export const loginUser = async (req: Request, res: Response) => {
 }
 
 
-export const logoutUser = async (req: Request, res: Response) => {
-  try {
+export const logoutUser = (req: Request, res: Response) => {
 
-    res.cookie("token", "", {
-      httpOnly: true,
-      expires: new Date(0)
-    }).send();
 
-  } catch (error) {
-    res.status(500).json({
-      message: error
-    })
-  }
+  res.cookie("token", "", {
+    httpOnly: true,
+    expires: new Date(0)
+  }).send();
+
+  res.status(200).json({
+    message: "User logged out"
+  })
+
 }

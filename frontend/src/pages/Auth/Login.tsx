@@ -18,9 +18,9 @@ const Login = () => {
     };
 
     try {
-      const res = await login(form);
+      const res = await login(form).unwrap();
 
-      navigate('/');
+      return navigate('/');
     } catch (error) {
       console.log(error);
     }
