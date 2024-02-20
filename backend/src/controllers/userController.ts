@@ -90,7 +90,7 @@ export const loginUser = async (req: Request, res: Response) => {
       return res.status(401).json({
         message: "Wrong user email or password"
       })
-    };
+    }
 
     const checkPassword = await bcrypt.compare(password, exist.passwordHash);
 
