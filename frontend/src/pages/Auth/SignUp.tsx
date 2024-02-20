@@ -23,9 +23,7 @@ const SignUp = () => {
     };
 
     try {
-      const res = await SignUp(form);
-
-      
+      const res = await SignUp(form).unwrap();
       navigate('/');
     } catch (error) {
       console.log(error);
